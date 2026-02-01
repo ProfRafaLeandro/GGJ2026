@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1898247818725652324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 581124010062692411}
+  - component: {fileID: 7727239006052910779}
+  m_Layer: 0
+  m_Name: MeetGarlic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &581124010062692411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898247818725652324}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7727239006052910779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898247818725652324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c81d4b4efd64fa4ba77a284cf4062c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  speachNumber: 2
+  speach:
+  - You have an extremely realistic mask! Did you make it yourself?
+  - You nod.
+  - Such a pity, you spent all this time on your mask while the only thing.
+  - I care about is what you have underneath it.
+  - Take it off, please.
+  - Sure&&Nah!
+  - Sorry, you just have... such a unique face.
+  - It's so... round... and smooth.
+  - You blush, slightly unsure of whether this is a compliment or insult.
+  - Anyways, unmasked friend of mine, how are you enjoying the party so far?
+  - Honestly, you have never enjoyed social occasions,
+  - the expectations put upon you by others to perform to their standards has always
+    grated away at your mental health
+  - as you slowly feel yourself lose autonomy during conversations.
+  - I'm having a great time!&&I don't like parties. But maybe this one will be different.
+  - Sorry, I've gotta leave you now for a bit to say hello to an old friend.
+  - I'll see you around later perhaps?
+  who: 02000000010000000200000002000000020000000000000002000000020000000100000002000000010000000100000001000000000000000200000002000000
+  expectedExpression: 6800680068006800680068006800680066006800680066006800680068006800
+  feeling: 6800660068006600660068006800660066006600660066006600660066006600
+  lovePoints: 00000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010000000000000000000000

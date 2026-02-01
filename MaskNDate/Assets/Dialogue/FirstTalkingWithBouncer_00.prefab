@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1898247818725652324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 581124010062692411}
+  - component: {fileID: 7727239006052910779}
+  m_Layer: 0
+  m_Name: FirstTalkingWithBouncer_00
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &581124010062692411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898247818725652324}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7727239006052910779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898247818725652324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c81d4b4efd64fa4ba77a284cf4062c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  speachNumber: 0
+  speach:
+  - ID?
+  - You rifle through your pockets and grab onto your ID, handing it to the bouncer.
+  - He examines it closely for a few seconds.
+  - Hmmm...
+  - You don't look the same right now as you do here, could you frown for me?
+  - No.&&Alright.
+  - Alright, everything seems legit
+  - The bouncer turns your ID upside down and stares at it.
+  - Okay, now I need you to turn that frown upside down for me!
+  - Alrighty!&&No.
+  - Alright fine, be that way.
+  - As you walk past the bouncer to enter, he grabs you by the hand.
+  - When expressing your emotions, green is your true self, while red is your false
+    self, okay?
+  who: 04000000010000000100000004000000040000000000000004000000010000000400000000000000040000000100000004000000
+  expectedExpression: 6600660066006600680066006800680068006800680068006800
+  feeling: 6600660066006600680066006600660066006800680066006800
+  lovePoints: 00000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000001000000

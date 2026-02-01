@@ -4,15 +4,17 @@ using UnityEngine.UI;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] List<GameObject> sprites;
+    [SerializeField] List<Sprite> sprites;
     Animator animator;
     [SerializeField] public string characterName;
     [SerializeField] public Color nameColor;
     [SerializeField] public int love;
+    Image image;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        image = GetComponentInChildren<Image>();
     }
 
     public void CharacterEnter(int n)
@@ -26,5 +28,9 @@ public class Character : MonoBehaviour
         animator.SetTrigger("FadeOut");
     }
 
+    public void ChangeImage(int n)
+    {
+        image.sprite = sprites[n];
+    }
 
 }

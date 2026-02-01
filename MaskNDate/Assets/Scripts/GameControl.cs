@@ -12,6 +12,7 @@ public class GameControl : MonoBehaviour
     [SerializeField] List<GameObject> characters = new List<GameObject>();
     [SerializeField] List<GameObject> dialogues = new List<GameObject>();
     [SerializeField] List<GameObject> selection = new List<GameObject>();
+    [SerializeField] List<Sprite> sprites = new List<Sprite>();
 
     List<GameObject> characterInScene = new List<GameObject>();
 
@@ -19,6 +20,10 @@ public class GameControl : MonoBehaviour
     [SerializeField] Animator faceAnimator;
     [SerializeField] Button nextButton;
     [SerializeField] GameObject hearts, masksAnimation;
+    [SerializeField] Image backgroundImage;
+    [SerializeField] List<AudioClip> audioClips;
+    [SerializeField] AudioSource faceSource;
+    AudioSource audioSource;
 
     Dialogue actualDialogue;
 
@@ -37,6 +42,17 @@ public class GameControl : MonoBehaviour
         {
             NextSpeach();
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ExpressionButton("h");
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            ExpressionButton("f");
+        }
+
     }
 
     private void Awake()
@@ -52,6 +68,8 @@ public class GameControl : MonoBehaviour
             Destroy(Instance );
             Instance = this;
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -71,15 +89,67 @@ public class GameControl : MonoBehaviour
         {
             case 0:
                 NewDialogue(0);
-                StartCoroutine(CallCharacter(1, 1));
+                ChangeBackground(8);
+                audioSource.clip = audioClips[0];
+                audioSource.Play();
                 break;
             case 1:
-                StartCoroutine(CharacterExit(0));
+                ChangeBackground(7);
+                NewDialogue(1);
                 break;
             case 2:
-                NewDialogue(1);
-                StartCoroutine(CallCharacter(0, 3));
+                //Bouncer meet
+                StartCoroutine(CallCharacter(4, 5));
+                NewDialogue(2);
+                audioSource.clip = audioClips[1];
+                audioSource.Play();
                 break;
+            case 3:
+                //inside the ballroon
+                ChangeBackground(5);
+                CharacterExit(0);
+                NewDialogue(3);
+                audioSource.clip = audioClips[2];
+                audioSource.Play();
+                break;
+            case 4:
+                //meet the Garlic
+                StartCoroutine(CallCharacter(2, 1));
+                NewDialogue(4);
+                audioSource.clip = audioClips[3];
+                audioSource.Play();
+                break;
+            case 5:
+                //pre BAthroom
+                CharacterExit(0);
+                NewDialogue(5);
+                audioSource.clip = audioClips[2];
+                audioSource.Play();
+                break;
+            case 6:
+                //Bathroom
+                ChangeBackground(6);
+                StartCoroutine(CallCharacter(2, 1));
+                characterInScene[0].GetComponent<Character>().ChangeImage(1);
+                NewDialogue(6);
+                audioSource.clip = audioClips[0];
+                audioSource.Play();
+                break;
+            case 7:
+                //Exiting from Bathroom
+                CharacterExit(0);
+                NewDialogue(7);
+                break;
+            case 8:
+                //inside the ballroon, again
+                ChangeBackground(5);
+                StartCoroutine(CallCharacter(2, 1));
+                NewDialogue(8);
+                audioSource.clip = audioClips[3];
+                audioSource.Play();
+                break;
+
+
             default:
                 SceneManager.LoadScene("GameOver");
                 break;
@@ -133,6 +203,8 @@ public class GameControl : MonoBehaviour
                 {
                     masks++;
                     masksAnimation.SetActive(true);
+                    faceSource.clip = audioClips[4];
+                    faceSource.Play();
                 }
 
                 if (expressionChosen == actualDialogue.expectedExpression[actualDialogue.speachNumber])
@@ -182,6 +254,7 @@ public class GameControl : MonoBehaviour
 
     IEnumerator CallCharacter(int character, int entranceWay)
     {
+        Debug.Log("call character");
         GameObject newCharacter = Instantiate(characters[character]);
         newCharacter.transform.SetParent(charactersParent.transform, false);
         RectTransform rt = newCharacter.GetComponent<RectTransform>();
@@ -259,5 +332,10 @@ public class GameControl : MonoBehaviour
     {
         characters[0].GetComponent<Character>().characterName = newName;
         Debug.Log("New Player Name = " + newName);
+    }
+
+    void ChangeBackground(int n)
+    {
+        backgroundImage.sprite = sprites[n];
     }
 }

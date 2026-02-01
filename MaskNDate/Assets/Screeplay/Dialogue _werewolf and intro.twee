@@ -1,0 +1,555 @@
+:: StoryTitle
+Dialogue (werewolf and intro
+
+
+:: StoryData
+{
+  "ifid": "8514025A-2157-4DA3-8A28-95A3CA3BA480",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Exposition",
+  "zoom": 1
+}
+
+
+:: Apology {"position":"2200,900","size":"100,100"}
+/werewolf sad
+
+"Err, I have to say again that I'm sorry about bumping into you earlier."
+"I wasn't looking, and I was stuck in my thoughts... I hope you're alright."
+
+It's not a problem at all! I'm A-OKAY! (lie)
+[[Smile Apology]]
+
+To be honest, I think my ass will have a bruise tomorrow...
+[[Frown Apology]]
+
+
+:: Bad Endings {"position":"3900,1100","size":"100,100"}
+
+[[Bad Werewolf Love Ending]] 
+
+[[Bad Werewolf Ending]]
+
+
+:: Bad Werewolf Ending {"position":"4300,1300","size":"100,100"}
+werewolf is offended and walks off
+
+
+:: Bad Werewolf Love Ending {"position":"4300,1100","size":"100,100"}
+love requirements for this ending are less than the others only 8.
+
+Werewolf continues to not be himself, he and you stay together after the party but he will always perform.
+
+
+:: Balcony {"position":"3900,700","size":"100,100"}
+[[Good Endings]] 
+
+
+:: Bathroom {"position":"1700,700","size":"100,100"}
+/background is bathroom door
+
+(I approach the bathroom, when suddenly a man comes barreling out of it and roughly knocks into me, almost sending me to the floor.)
+
+/werewolf enters screen midldle,, sad sprite
+
+(It's that wolf from earlier...)
+W:"Sorry man..."
+
+/werewolf leaves
+
+(What's his problem...)
+(You steady yourself, and enter the bathroom.)
+
+/background is bathroom interior
+
+(I spend a few minutes in the bathroom.)
+(Washing your hands,)
+(Staring in the mirror,)
+(Pulling Faces,)
+(You feel okay now.)
+(Gathering your resolve, you leave the bathroom, heading back out into the ballroom.)
+
+[[Lover Choice]]
+
+
+:: Bouncer 1 ID {"position":"300,500","size":"100,100"}
+/background is club exterior
+/Bouncer is center screen.
+
+(Approaching the club fills you with a heavy sense of dread and unfamiliarity. You have never done anything like this before and have grown accustomed to your life of solitude and peace.)
+(A light tingling feeling of excitement can be felt in your legs with every step that brings you closer to the entrance.)
+(The queue infront of you trickles down, slowly reducing in number as The Bouncer lets the guests through.)
+(After about ten minutes, it's your turn.)
+
+/bouncer enters screen middle.
+
+"ID?"
+
+(You rifle through your pockets and grab onto your ID, handing it to the bouncer.)
+(He examines it closely for a few seconds.)
+
+"Hmmm..."
+"You don't look the same right now as you do here, could you frown for me?"
+
+
+
+No.
+[[Smile Bouncer 1 ID]] 
+
+Alright.
+[[Frown Bouncer 1 ID]]
+
+
+:: Exposition {"position":"100,500","size":"100,100"}
+//No characters on screen, just blank text against a black background//
+
+It's Friday night, you think about spending another evening at home, acting out scenarios with different masks on. Your collection has been growing day by day since you started shutting yourself indoors and living as a recluse, spending your time painting and modelling masks of many shapes and sizes. You place your hand on your favourite mask, the one you have worked on day and night for countless hours, your magnum opus. 
+
+A flyer slides under your front door. "Mask-n-Date Party". You wanna go! To show off your lovely mask!
+
+
+[[Bouncer 1 ID]]
+
+
+:: Friends {"position":"3000,900","size":"100,100"}
+/werewolf neutral
+
+"Um, do you have any childhood friends or anything like that?
+
+
+A few, we are still really close [smile] (lie)
++1 affection
++1 mask
++maskingtwinge
+
+
+A few, but we lost touch [frown]
++1 affection
+
+
+[[Silver]]
+
+
+:: Frown Apology {"position":"2400,1100","size":"100,100"}
+/werewolf laugh
++1 werewolf affection
+
+(The werewolf laughs, surprisingly loudly.)
+(...)
+(He's still laughing.)
+(...)
+W:"Sorry, sorry, i'm still sorry but the fact that you actually said that is funny to me... "
+"Anyways, I'll make it up to you, okay?"
+
+(You nod, happily.)
+
+[[Small Talk]]
+
+
+:: Frown Bouncer 1 ID {"position":"500,700","size":"100,100"}
+/bouncersmile
+
+"Alright, everything seems legit"
+
+/bouncerneutral
+
+(The bouncer turns your ID upside down and stares at it.)
+
+"Okay, now I need you to turn that frown upside down for me!"
+
+
+Alrighty!
+[[Smile Bouncer 2 ID]]
+
+No. [[Frown Bouncer 2 ID]]
+
+
+:: Frown Bouncer 2 ID {"position":"600,900","size":"100,100"}
+/bouncerfrown
+
+"Alright fine, be that way."
+"No idea why you even came out tonight if you're gonna be in a mood... Not my problem."
+
+[[Party Entrance]]
+
+
+:: Frown Party Entrance {"position":"900,900","size":"100,100"}
+/vampireangry
+/werewolfhappy
+
+V:"Don't be such a joykill, the party has barely even started."
+
+/+1 werewolf affection
+W:"Actually, I feel the same way. I'm not really a fan of parties either, my ears tend to pick up too much noise and it's all so overwhelming."
+
+V:"Okay pack it up doggy, no one cares about your 'super-sonic hearing'.
+
+[[Vampire Shittalk]]
+
+
+:: Frown Silver Expansion {"position":"3600,1100","size":"100,100"}
+/werewolf neutral
+
+"Thanks, but I think it's more complicated than that..."
+
+[[Relating]] 
+
+
+:: Frown Small Talk {"position":"2800,1100","size":"100,100"}
+/masking twinge
+/mask + 1
+/werewolf fake smile
+
+"...!"
+"Ohhhh, of course, right... Only nerds and losers like stuff like that..."
+"Ahaha..."
+
+/werewolf sad
+
+[[Friends]]
+
+
+:: Frown Vampire Shittalk {"position":"1300,900","size":"100,100"}
+/vampire angry
++WEREWOLF affection +1 (he heard from offscreen with supersonic hearing)
+
+V:"You know, it's gonna be really hard to make any friends if you keep defending freaks like him."
+
+/vampire look at nails
+"I'm gonna give you the benefit of the doubt though, I love to give second chances!"
+
+[[Pre-Bathroom]]
+
+
+:: Good Endings {"position":"4100,700","size":"100,100"}
+
+
+
+:: Lover Choice {"position":"1900,700","size":"100,100"}
+/background is ballroom
+/both the vampire and the werewolf are visible.
+
+(You scan the ballroom, it's fuller now than how it was when you entered the bathroom.)
+(You spot both the vampire and the werewolf, they're standing in completely separate parts of the room, there's no way to speak to both of them at the same time.)
+(I have to choose which one I would like to speak to for the rest of the night now.
+
+/player clicks on either the vampire or the werewolf, their choice bring them to werewolf or vampire route.
+
+[[Vampire Route]]
+
+[[Werewolf Route]]
+
+
+:: Party Entrance {"position":"800,700","size":"100,100"}
+(As you walk past the bouncer to enter, he grabs you by the hand.)
+(What the hell???)
+(He turns to you and looks deep into your eyes.)
+"Remember... PLAYERNAME-"
+(How does he know my name???)
+"It says it on your ID silly!"
+(CAN HE HEAR MY THOUGHTS?)
+"REMEMBER... PLAYERNAME. When expressing your emotions, green is your true self, while red is your false self, okay?"
+(
+
+(You take out your mask and put it on, preparing yourself for what is to come.)
+
+/player icon becomes player mask
+/background is ballroom
+
+(Stepping into the ballroom, bright light hits your eyes, a stark contrast to the dark night on the street that you were standing on just a few seconds ago.)
+(Looking around, you see dozens of guests, each dressed in formal attire and donning masks resembling various monsters.)
+(A man in a zombie mask taps you on the shoulder followed by a thumbs-up as he appreciates the artistry that you put into your mask.)
+(Across the room, you spy guests dressed as both a vampire and a werewolf standing together and ushering you over towards them.)
+(Your heart skips a beat at the sight of the two of them, you quickly follow their gesture and approach.)
+
+/Vampire enters left side, Werewolf enters right side
+/Until they introduce themselves by name, the text box will just refer to them as vampire and werewolf
+
+V: "Well, well, well, I wasn't expecting to see anyone else like us at this party!"
+
+/werewolf shocked sprite
+(The werewolf's eyes widen in shock as the vampire says this and quickly interjects)
+
+/werewolf neutral sprite
+W: "AHEM, he means that you have an extremely realistic mask! Did you make it yourself?"
+
+(You nod.)
+
+V: "Such a pity, you spent all this time on your mask while the only thing I care about is what you have underneath it."
+"Take it off, please."
+
+(You oblige, removing your mask infront of them both.)
+(Their jaws drop in shock as they catch sight of your real face.)
+
+/werewolf shocked sprite
+/vampire shocked sprite
+Both: "Woah."
+
+/werewolf neutral sprite
+/vampire neutral sprite
+W: "Sorry, you just have... such a unique face."
+"It's so... round... and smooth."
+
+(You blush, slightly unsure of whether this is a compliment or insult.)
+
+V: "Anyways, unmasked friend of mine, how are you enjoying the party so far?"
+
+(Honestly, you have never enjoyed social occasions, the expectations put upon you by others to perform to their standards has always grated away at your mental health as you slowly feel yourself lose autonomy during conversations.) 
+
+I'm having a great time! (fake)
+[[Smile Party Entrance]] 
+
+I don't like parties. But maybe this one will be different.
+[[Frown Party Entrance]]
+
+
+:: Pre-Bathroom {"position":"1500,700","size":"100,100"}
+(Suddenly, a large group of guests enter the ballroom.)
+(One of them catches the vampires eye and he clearly recognises them.)
+
+V:"Sorry, I've gotta leave you now for a bit to say hello to an old friend."
+"I'll see you around later perhaps?"
+
+/vampire leaves screen
+(He leaves before you can respond.)
+(Now standing alone in this room, you begin to overthink.)
+(The though of walking up to a pre-established group and weaseling your way in makes you sick.)
+(The idea of continung to stand here until the vampire is finished talking with his friends makes you sicker.)
+(You decide to make your way to the bathroom, to hide out for a bit, maybe courage will come to you if you let yourself relax for a moment.
+
+[[Bathroom]]
+
+
+:: Relating {"position":"3800,900","size":"100,100"}
+"Sorry that I'm talking so much."
+"I haven't really even said any of this before to anyone."
+"About the way I change myself around others."
+"I guess, I dunno, maybe I feel like you do the same?"
+
+
+I do.
++2 relationship
+[[Balcony]]
+
+
+Your problems are really not that big of a deal. (lie)
+[[Bad Endings]]
+
+
+:: Silver {"position":"3200,900","size":"100,100"}
+/werewolf neutral
+
+"Oh, yeah?"
+
+/werewolf sad
+"Sorry if that was a random question, it's just kind of on my mind tonight."
+"I only really had one childhood friend, I mostly keep to myself."
+"It's just, I ran into him again tonight, for the first time in a long, long time."
+"He was the guy from earlier, remember? The vampire."
+"Yeah, I don't know... Things just didn't work out."
+
+
+Tell me more! [smile]
++1 affection
+
+I'm sorry to hear that... (lie) [frown]
++1 mask
++1 affection
+
+[[Silver Expansion]]
+
+
+:: Silver Expansion {"position":"3400,900","size":"100,100"}
+/werewolf
+
+"Well, I guess there is more to it than that."
+"I sort of idolised him, the way he could hold so much importance in a conversation and easily be seen as "cool"."
+"As time passed, he got tired of me and my way of life, choosing to hang out only with those of a higher social status."
+
+
+I'm sure he had his reasons! (lie)
+[[Smile Silver Expansion]]
+
+He sounds like a dick.
+[[Frown Silver Expansion]]
+
+
+"I tried to copy him in an attempt to keep up with him, but I dunno, I just tended to embarass myself when I tried."
+"Even these days, I still catch myself pretending, trying to fit in."
+
+
+
+:: Small Talk {"position":"2600,900","size":"100,100"}
+/werewolf neutral
+
+"So, what do you do in your spare time?"
+"Maybe that's a stupid question, but I don't really know what to talk about in this situation..."
+"But, do you like arts and crafts?"
+
+
+I like to make masks!
+[[Smile Small Talk]]
+
+No, I hate arts and crafts, I only lift weights and pick up chicks. (lie)
+[[Frown Small Talk]]
+
+
+:: Smile Apology {"position":"2400,700","size":"100,100"}
+/play masktwinge
+/mask +1
+/werewolf neutral
+
+"I'm glad!
+
+(You don't really know how to continue the conversation.)
+
+/werewolf fake smile
+/mask twinge but quieter because its from the werewolf
+W: "..."
+
+(...)
+
+W: "Anyways..."
+
+[[Small Talk]]
+
+
+:: Smile Bouncer 1 ID {"position":"400,300","size":"100,100"}
+/bouncerfrown
+
+"Please stop messing around."
+/bouncerneutral
+"I can't let you in unless you try to match the face on your ID."
+
+
+
+No!
+[[Smile Bouncer 1 ID]] 
+
+Ok, fine...
+[[Frown Bouncer 1 ID]]
+
+
+:: Smile Bouncer 2 ID {"position":"600,500","size":"100,100"}
+/bouncersmile
+
+"That's what I like to see!"
+"Go get'em tiger!"
+
+[[Party Entrance]]
+
+
+:: Smile Party Entrance {"position":"900,500","size":"100,100"}
+/play masktwinge
+/+1 mask
+/vampirehappy
+
+(I contort my face into a grin, lying through my teeth)
+
+V:"Ahaha I'm so glad you are! I've been stuck talking with this wolf, it's like talking to a brick wall.
+
+/werewolf fake smile
+/mask twinge plays, but at a lower volume as the wolf is the one triggering it, not you
+W: "HA HA HA! I AGREE- I agree with you! This party is amazing!"
+"I LOVE PARTIES!"
+
+/vampire angry
+V: "Can you stop screaming, Garlic? You're gonna give me hearing loss."
+
+[[Vampire Shittalk]]
+
+
+:: Smile Silver Expansion {"position":"3600,700","size":"100,100"}
+/play masktwinge
+/mask +1
+
+"I guess..."
+
+[[Relating]] 
+
+
+:: Smile Small Talk {"position":"2800,700","size":"100,100"}
+/werewolf smile
+/werewolf affection +1
+
+"NO WAY!"
+"THATS why your mask was so good..."
+"I just thought you spent like... a hundred bucks on it or something."
+
+[[Friends]]
+
+
+:: Smile Vampire Shittalk {"position":"1300,500","size":"100,100"}
+/masktwinge
+/mask +1
+/vampirehappy
+/Vampire affection +1
+
+V:"I am SO glad someone else agrees, dont even get me started on that damned wolf."
+"I could go on and on about every facet of his character that irritates me, such as his face, his stupid bow tie, his sense of humour."
+
+(It seems he is going to get started on that damned wolf after all.)
+
+[[Pre-Bathroom]]
+
+
+:: Vampire Route {"position":"2000,500","size":"100,100"}
+being done by liam
+
+
+:: Vampire Shittalk {"position":"1100,700","size":"100,100"}
+//werewolf happy
+
+W: "Speaking of hearing, what did the orange say to the apple?"
+
+/vampire neutral
+V: "What."
+
+/werewolf silly
+W: "KNIFE!"
+/music stops
+
+(...)
+/womp womp sound effect
+
+/vampire angry
+V:"..."
+
+/werewolf sad
+W:"..."
+"I have to go now."
+/werewolf leaves screen, vampire moves to center.
+
+/music continues
+/vampire looking at nails
+V:"I dont know what is wrong with that dog but someone needs to look into euthanisation.
+"Seriously, I dont understand how anyone can say something like that and then be trusted to function in our society."
+
+
+I know, right? (fake)
+[[Smile Vampire Shittalk]] 
+
+I don't think he deserves to be spoken about like that.
+[[Frown Vampire Shittalk]]
+
+
+:: Werewolf Route {"position":"2000,900","size":"100,100"}
+(You approach the werewolf from across the floor, pushing your way through the crowd to reach him)
+
+/textbox ui changes to werewolf textbox
+/werewolf enters screen centre
+/werewolf smile
+
+(You notice he is stood entirely alone.)
+/ +1 affection (he didn't expect you to come up to him again)
+
+"Hi!"
+"Um, I never actually told you my name earlier, it's Garlic! Like the vegetable."
+
+//from now on, his name in textbox should be garlic instead of werewolf
+also from now on in the script there wont be a W: before he speaks as he is the only character who speaks.//
+
+(You tell him that your name is PLAYERNAME.)
+
+[[Apology]]

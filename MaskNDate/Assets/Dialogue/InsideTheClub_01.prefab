@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1898247818725652324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 581124010062692411}
+  - component: {fileID: 7727239006052910779}
+  m_Layer: 0
+  m_Name: InsideTheClub_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &581124010062692411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898247818725652324}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7727239006052910779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898247818725652324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c81d4b4efd64fa4ba77a284cf4062c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  speachNumber: 0
+  speach:
+  - Hi!&&Are you crazy?
+  - Sorry man...
+  - Um, I never actually told you my name earlier, it's Garlic! Like the vegetable.
+  - Err, I have to say again that I'm sorry about bumping into you earlier.
+  - I wasn't looking, and I was stuck in my thoughts... I hope you're alright.
+  - It's not a problem at all! I'm A-OKAY!&&To be honest, I think my ass will have
+    a bruise tomorrow...
+  - So, what do you do in your spare time?
+  - 'Maybe that''s a stupid question, '
+  - ut I don't really know what to talk about in this situation...
+  - But, do you like arts and crafts?
+  - I like to make masks!&&No, I hate arts and crafts, I only lift weights and pick
+    up chicks.
+  - Um, do you have any childhood friends or anything like that?
+  - A few, we are still really close&&A few, but we lost touch
+  - 'Sorry if that was a random question, '
+  - it's just kind of on my mind tonight.
+  - I only really had one childhood friend,
+  - I mostly keep to myself.
+  - 'It''s just, I ran into him again tonight, '
+  - ' for the first time in a long, long time.'
+  - The vampire.
+  - 'Tell me more!&&I''m sorry to hear that... '
+  - Well, I guess there is more to it than that.
+  - I sort of idolised him,
+  - the way he could hold so much importance in a conversation and easily be seen
+    as "cool".
+  - As time passed, he got tired of me and my way of life
+  - choosing to hang out only with those of a higher social status.
+  - I'm sure he had his reasons!&&He sounds like a dick.
+  - I tried to copy him in an attempt to keep up with him
+  - ' but I dunno'
+  - I just tended to embarass myself when I tried.
+  - Even these days,
+  - ' I still catch myself pretending, trying to fit in.'
+  who: 0000000002000000020000000200000002000000000000000200000002000000020000000200000000000000020000000000000002000000020000000200000002000000020000000200000002000000000000000200000002000000020000000200000002000000000000000200000002000000020000000200000002000000
+  expectedExpression: 66006800680068006800680068006800680068006800680068006600660066006600660066006600660066006600660066006600660066006600660066006600
+  feeling: 66006600680068006800660066006800680068006800680066006600660066006600660066006600680066006600660066006600660066006600660066006600
+  lovePoints: 0000000001000000000000000000000000000000010000000000000000000000000000000000000001000000000000000100000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000
