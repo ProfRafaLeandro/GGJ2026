@@ -14,7 +14,7 @@ public class GameControl : MonoBehaviour
     [SerializeField] List<GameObject> selection = new List<GameObject>();
     [SerializeField] List<Sprite> sprites = new List<Sprite>();
 
-    List<GameObject> characterInScene = new List<GameObject>();
+    GameObject characterInScene;
 
     [SerializeField] GameObject charactersParent;
     [SerializeField] Animator faceAnimator;
@@ -27,7 +27,7 @@ public class GameControl : MonoBehaviour
 
     Dialogue actualDialogue;
 
-    int stage = 0;
+    int stage = 6;
     public int  masks;
     char expressionChosen;
     char emotionFelt;
@@ -107,7 +107,7 @@ public class GameControl : MonoBehaviour
             case 3:
                 //inside the ballroon
                 ChangeBackground(5);
-                CharacterExit(0);
+                characterInScene.SetActive(false);
                 NewDialogue(3);
                 audioSource.clip = audioClips[2];
                 audioSource.Play();
@@ -121,7 +121,7 @@ public class GameControl : MonoBehaviour
                 break;
             case 5:
                 //pre BAthroom
-                CharacterExit(0);
+                Destroy(characterInScene.gameObject);
                 NewDialogue(5);
                 audioSource.clip = audioClips[2];
                 audioSource.Play();
@@ -130,20 +130,20 @@ public class GameControl : MonoBehaviour
                 //Bathroom
                 ChangeBackground(6);
                 StartCoroutine(CallCharacter(2, 1));
-                characterInScene[0].GetComponent<Character>().ChangeImage(1);
                 NewDialogue(6);
                 audioSource.clip = audioClips[0];
                 audioSource.Play();
                 break;
             case 7:
                 //Exiting from Bathroom
-                CharacterExit(0);
+                characterInScene.SetActive(false);
                 NewDialogue(7);
                 break;
             case 8:
                 //inside the ballroon, again
                 ChangeBackground(5);
-                StartCoroutine(CallCharacter(2, 1));
+                characterInScene.SetActive(true);
+                characterInScene.GetComponent<Character>().ChangeImage(1);
                 NewDialogue(8);
                 audioSource.clip = audioClips[3];
                 audioSource.Play();
@@ -266,16 +266,9 @@ public class GameControl : MonoBehaviour
 
         yield return new WaitForSeconds(1);
         newCharacter.GetComponent<Character>().CharacterEnter(entranceWay);
-        characterInScene.Add(newCharacter);
+        characterInScene = newCharacter;
     }
 
-    IEnumerator CharacterExit(int n)
-    {
-        characterInScene[n].GetComponent<Character>().CharacterExit();
-        yield return new WaitForSeconds(0.5f);
-        characterInScene.RemoveAt(n);
-        NextStage();
-    }
 
     public void AllowAdvance()
     {
